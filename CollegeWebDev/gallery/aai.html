@@ -1,0 +1,58 @@
+<hr />
+<div class="container">
+    <div class="row gtr-150">
+        <div class="col-4 col-12-medium">
+
+            <div id="sidebar">
+                <section class="box">
+                    <header>
+                        <h2>Ai and Arts.</h2>
+                    </header>
+                    <p>
+                        What is the AI art?
+                        AI art is any art form generated using Artificial Intelligence. It uses algorithms that learn a specific aesthetic based on textual prompts and, after that, go through vast amounts of data in the form of available images as the first step.
+                    </p>
+                    <a href="#" class="button style3">Archives</a>
+                </section>
+            </div>
+        </div>
+        <section class="box">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img class="slider-image" alt="image1" src="gallery/images/Ai/Ai_1.jpg">
+                    <img class="slider-image" alt="image2" src="gallery/images/Ai/Ai_2.png">
+                    <img class="slider-image" alt="image3" src="gallery/images/Ai/Ai_3.jpg">
+                    <img class="slider-image" alt="image3" src="gallery/images/Ai/Ai_4.png">
+                    <img class="slider-image" alt="image3" src="gallery/images/Ai/Ai_5.png">
+                </div>
+                <div class="slider-prev" onclick="prevSlide()"></div>
+                <div class="slider-next" onclick="nextSlide()"></div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var slideIndex = 1;
+    window.onload = function () {
+        showSlides(slideIndex);
+    }
+    function nextSlide() {
+        showSlides(slideIndex += 1);
+    }
+
+    function prevSlide() {
+        showSlides(slideIndex -= 1);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slider-image");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+<hr />

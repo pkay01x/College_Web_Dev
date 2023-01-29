@@ -1,0 +1,58 @@
+<hr />
+<div class="container">
+    <div class="row gtr-150">
+        <div class="col-4 col-12-medium">
+
+            <div id="sidebar">
+                <section class="box">
+                    <header>
+                        <h2>Sci-Fi Art.</h2>
+                    </header>
+                    <p>
+                        Science fiction is a genre of speculative fiction that contains imagined elements that don't exist in the real world. Science fiction spans a wide range of themes that often explore time travel, space travel, are set in the future, and deal with the consequences of technological and scientific advances.
+                    </p>
+                    <a href="#" class="button style3">Archives</a>
+                </section>
+            </div>
+        </div>
+        <section class="box">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img class="slider-image" alt="image1" src="gallery/images/Scifi/Scifi_1.jpg">
+                    <img class="slider-image" alt="image1" src="gallery/images/Scifi/Scifi_2.jpg">
+                    <img class="slider-image" alt="image1" src="gallery/images/Scifi/Scifi_3.jpg">
+                    <img class="slider-image" alt="image1" src="gallery/images/Scifi/Scifi_4.jpg">
+                    <img class="slider-image" alt="image1" src="gallery/images/Scifi/Scifi_5.jpg">
+
+                </div>
+                <div class="slider-prev" onclick="prevSlide()"></div>
+                <div class="slider-next" onclick="nextSlide()"></div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    var slideIndex = 1;
+    window.onload = function () {
+        showSlides(slideIndex);
+    }
+    function nextSlide() {
+        showSlides(slideIndex += 1);
+    }
+
+    function prevSlide() {
+        showSlides(slideIndex -= 1);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slider-image");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+<hr />
